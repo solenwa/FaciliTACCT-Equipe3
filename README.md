@@ -4,6 +4,7 @@
 mkdir new_project
 cd new_project
 # create a new virtual python environment
+pyenv local 3.13
 python -m venv .venv
 # activate new virtual environment
 source .venv/bin/activate

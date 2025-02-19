@@ -17,7 +17,7 @@ def extract():
 def transform(df):
     """clean CSV
     check if INSEE's code is correct
-    filter usefull columns
+    filter useful columns
     convert area to km2
     and aggregate fires per year and countie
     """
@@ -38,7 +38,7 @@ def transform(df):
     # Area covered by fire, by year and by community
     df_surfaces_incendiées_par_collectivite_et_annee = new_df.groupby(['Code INSEE', 'Année'])['Surface parcourue (km2)'].sum().reset_index().copy()
 
-    # Merging calculated values
+    # To merge calculated values
     df_calcul_incendies_et_surfaces = pd.merge(df_incendies_par_collectivite_et_annee, df_surfaces_incendiées_par_collectivite_et_annee, on=['Code INSEE', 'Année'])
     return new_df, df_calcul_incendies_et_surfaces
 

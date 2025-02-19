@@ -43,6 +43,7 @@ jupyterlab_pygments==0.3.0
 jupyterlab_server==2.27.3
 MarkupSafe==3.0.2
 matplotlib-inline==0.1.7
+matplotlib==3.10.0
 mistune==3.1.0
 nbclient==0.10.2
 nbconvert==7.16.5
